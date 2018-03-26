@@ -3,10 +3,10 @@ console.log(rateOfReturn);
 var barChart = new Chart(rateOfReturn, {
 		type: 'bar',
 		data: {
-			labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+			labels: ["Rate of Return", "Fee #1", "Fee #2", "Fee #3"],
 			datasets: [{
-				label: '# of Votes',
-				data: [12, 19, 3, 5, 2, 3],
+				label: 'Balance by Year',
+				data: [.07, .001, .002, .015],
 				backgroundColor: [
 						'rgba(255, 99, 132, 0.2)',
 						'rgba(54, 162, 235, 0.2)',
