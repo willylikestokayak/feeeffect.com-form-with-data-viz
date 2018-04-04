@@ -1,29 +1,62 @@
-var rateOfReturn = document.getElementById("feeEffectChart");
+let rateOfReturn = document.getElementById("feeEffectChart");
 console.log(rateOfReturn);
-var barChart = new Chart(rateOfReturn, {
-		type: 'bar',
-		data: {
-			labels: ["Rate of Return", "Fee #1", "Fee #2", "Fee #3"],
-			datasets: [{
-				label: 'Balance by Year',
-				data: [.07, .001, .002, .015],
-				backgroundColor: [
-						'rgba(255, 99, 132, 0.2)',
-						'rgba(54, 162, 235, 0.2)',
-						'rgba(255, 206, 86, 0.2)',
-						'rgba(75, 192, 192, 0.2)',
-						'rgba(153, 102, 255, 0.2)',
-						'rgba(255, 159, 64, 0.2)'
-				],
-				borderColor: [
-						'rgba(255,99,132,1)',
-						'rgba(54, 162, 235, 1)',
-						'rgba(255, 206, 86, 1)',
-						'rgba(75, 192, 192, 1)',
-						'rgba(153, 102, 255, 1)',
-						'rgba(255, 159, 64, 1)'
-				],
-				borderWidth: 1
-		}]
-	},
+
+let barChart = new Chart(rateOfReturn, {
+	type: 'bar',
+	data: {
+		labels: ["Rate of Return", "Fee #1", "Fee #2", "Fee #3"],
+		datasets: [{
+			label: 'Balance by Year',
+			data: [],
+			backgroundColor: [],
+			borderColor: [],
+			borderWidth: 1
+	}]
+},
 });
+
+let buttonElement = document.getElementById("btn");
+
+buttonElement.addEventListener('click', function(event){
+
+	let testValue1 = parseInt(document.getElementById("test1").value, 10);
+	let testValue2 = parseInt(document.getElementById("test2").value, 10);
+	let testValue3 = parseInt(document.getElementById("test3").value, 10);
+	let testValue4 = parseInt(document.getElementById("test4").value, 10);
+
+	data = [testValue1, testValue2, testValue3, testValue4]
+	
+	function addData(data) {
+		chart.data.labels.push(label);
+		chart.data.datasets.forEach((dataset) => {
+				dataset.data.push(data);
+		});
+		chart.update();
+	}
+	
+});
+// console.log(data);
+// function addData(data) {
+// 	chart.data.labels.push(label);
+// 	chart.data.datasets.forEach((dataset) => {
+// 			dataset.data.push(data);
+// 	});
+// 	chart.update();
+// }
+
+
+
+// First Name: <input type="text" id="myText" value="Mickey">
+
+// <p>Click the button to display the value of the value attribute of the text field.</p>
+
+// <button onclick="myFunction()">Try it</button>
+
+// <p id="demo"></p>
+
+// <script>
+// function myFunction() {
+//     var x = document.getElementById("myText").value;
+//     document.getElementById("demo").innerHTML = x;
+// }
+// </script>

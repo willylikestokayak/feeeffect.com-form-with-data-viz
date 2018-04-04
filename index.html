@@ -9,18 +9,23 @@
   <body>
 		<form>
 			Annualized rate of return: 
-			<input type="number" name="rateofreturn"><br>
+			<input type="number" id="test1"><br>
 			Annual investment fee 1:
-			<input type="number" name="investmentfee1"><br>
+			<input type="number" id="test2"><br>
 			Annual investment fee 2:
-			<input type="number" name="investmentfee2"><br>
+			<input type="number" id="test3"><br>
 			Annual investment fee 3:
-			<input type="number" name="investmentfee3"><br>
+			<input type="number" id="test4"><br>
+			<input type ="button" id="btn" value="what can you save?">
+			<!-- <input type="button" id="btn" value="press me" onclick="displayGraph();"/> -->
 		</form>
+		<p id="welcome"></p>
 		<div style="width: 400px;">
 			<canvas id="feeEffectChart" height="400" width="400"></canvas>
 		</div>
+
 		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<script type="text/javascript" src="app.js"></script>
   </body>
 </html>
