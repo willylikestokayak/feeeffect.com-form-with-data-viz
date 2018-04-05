@@ -18,7 +18,7 @@ let buttonElement = document.getElementById("btn");
 
 buttonElement.addEventListener('click', function(event){
 	
-	let testValue1 = parseInt(document.getElementById("test1").value, 10);
+	let testValue1 = parseInt(document.getElementById("test1").value, 10)*20;
 	let testValue2 = parseInt(document.getElementById("test2").value, 10);
 	let testValue3 = parseInt(document.getElementById("test3").value, 10);
 	let testValue4 = parseInt(document.getElementById("test4").value, 10);
