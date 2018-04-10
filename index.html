@@ -7,23 +7,26 @@
     <title>Fee Effect</title>
   </head>
   <body>
-		<form>
-			Annualized rate of return: 
-			<input type="number" id="test1"><br>
-			Annual investment fee 1:
-			<input type="number" id="test2"><br>
-			Annual investment fee 2:
-			<input type="number" id="test3"><br>
-			Annual investment fee 3:
-			<input type="number" id="test4"><br>
-			<input type ="button" id="btn" value="what can you save?">
-			<!-- <input type="button" id="btn" value="press me" onclick="displayGraph();"/> -->
-		</form>
-		<p id="welcome"></p>
-		<div style="width: 400px;">
-			<canvas id="feeEffectChart" height="400" width="400"></canvas>
+		<div id="formDiv">
+			<form id="inputForm">
+				Portfolio Value: 
+				<input type="number" id="portfolioValue"><br>
+				Portfolio Return:
+				<input type="number" id="portfolioReturn"><br>
+				Return:
+				<input type="number" id="return"><br>
+				Current Fee:
+				<input type="number" id="currentFee"><br>
+				Negotiated Fee:
+				<input type="number" id="negotiatedFee"><br>
+				<input type ="button" id="btn" value="Calculate Savings">
+			</form>
+		</div>	
+		<p id="welcome">Insert disclaimer</p>
+		<div id="barChart">
+			<canvas id="feeEffectChart"></canvas>
 		</div>
-
+		
 		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<script type="text/javascript" src="app.js"></script>

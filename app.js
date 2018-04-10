@@ -1,39 +1,27 @@
-// let rateOfReturn = document.getElementById("feeEffectChart");
-
-// let barChart = new Chart(rateOfReturn, {
-// 	type: 'bar',
-// 	data: {
-// 		labels: ["Rate of Return", "Fee #1", "Fee #2", "Fee #3"],
-// 		datasets: [{
-// 			label: 'Balance by Year',
-// 			data: [],
-// 			backgroundColor: [],
-// 			borderColor: [],
-// 			borderWidth: 1
-// 	}]
-// },
-// });
-
 let buttonElement = document.getElementById("btn");
 
 buttonElement.addEventListener('click', function(event){
-	
-	let testValue1 = parseInt(document.getElementById("test1").value, 10)*20;
-	let testValue2 = parseInt(document.getElementById("test2").value, 10);
-	let testValue3 = parseInt(document.getElementById("test3").value, 10);
-	let testValue4 = parseInt(document.getElementById("test4").value, 10);
-
-	// newData = [testValue1, testValue2, testValue3, testValue4]
+	//form input elements
+	let userInputPV = parseInt(document.getElementById("portfolioValue").value, 10);
+	let userInputPR = parseInt(document.getElementById("portfolioReturn").value, 10);
+	let userInputReturn = parseInt(document.getElementById("return").value, 10);
+	let userInputCF = parseInt(document.getElementById("currentFee").value, 10);
+	let userInputNF = parseInt(document.getElementById("negotiatedFee").value, 10);
+	//variables need update with formulas to calculate savings data
+	let year5;
+	let year10;
+	let year15;
+	let year20;
 
 	let rateOfReturn = document.getElementById("feeEffectChart");
 
 	let barChart = new Chart(rateOfReturn, {
 		type: 'bar',
 		data: {
-			labels: ["Rate of Return", "Fee #1", "Fee #2", "Fee #3"],
+			labels: ["Year 5", "Year 10", "Year 15", "Year 20"],
 			datasets: [{
-				label: 'Balance by Year',
-				data: [testValue1, testValue2, testValue3, testValue4],
+				label: "FeeEffect Calculator",
+				data: [userInputPV, userInputPR, userInputReturn, userInputCF, userInputNF],
 				backgroundColor: [],
 				borderColor: [],
 				borderWidth: 1
@@ -43,14 +31,3 @@ buttonElement.addEventListener('click', function(event){
 	});
 	
 });
-
-
-//	barChart.destroy();
-// function addData(data) {
-// 	console.log(data);
-// 	barChart.data.datasets.forEach((newData) => {
-// 			dataset.data.push(newData);
-// 			console.log(data);
-// 	});
-// 	barChart.update();
-// }
